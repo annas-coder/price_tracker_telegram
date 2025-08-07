@@ -1,4 +1,3 @@
-import TelegramBot from 'node-telegram-bot-api';
 import { readSubscribers, saveSubscribers } from '../../services/userService.js';
 
 export const handleStartCommand = async (bot, msg) => {

@@ -1,4 +1,3 @@
-// import { Bot } from 'node-telegram-bot-api';
 import { readSubscribers, saveSubscribers } from '../../services/userService.js';
 import { getProductPrice } from '../../services/scraper.js';
 
@@ -7,17 +6,17 @@ export const handleMessage = async (bot, msg) => {
 
   if (text.startsWith('/')) return;
 
+  const { subscribers } = await readSubscribers();
+  const userIndex = subscribers.findIndex(user => user.id === id);
+
+  if (userIndex === -1) {   
+    return bot.sendMessage(id, '⚠️ You are not subscribed yet. Send /start first!');
+  }
+
   const urlRegex = /(https?:\/\/[^\s]+)/g;
 
   if (!urlRegex.test(text)) {
     return bot.sendMessage(id, '❌ Please send a valid product URL.');
-  }
-
-  const { subscribers } = await readSubscribers();
-  const userIndex = subscribers.findIndex(user => user.id === id);
-
-  if (userIndex === -1) {
-    return bot.sendMessage(id, '⚠️ You are not subscribed yet. Send /start first!');
   }
 
   bot.sendMessage(id, '⏳ Scraping product details, please wait...');

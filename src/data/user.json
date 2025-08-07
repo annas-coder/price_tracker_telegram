@@ -4,13 +4,14 @@
       "id": 1256459666,
       "first_name": "Mohamed",
       "last_name": "Anas S",
-      "productList": []
-    },
-    {
-      "id": 5317321340,
-      "first_name": "Kadersha",
-      "last_name": "Fazil Dxb",
-      "productList": []
+      "productList": [
+        {
+          "id": 1,
+          "url": "https://www.amazon.ae/Native-Purifier-RO-Copper-Alkaline/dp/B0D79G62J3?pf_rd_p=074a1b8f-0e30-43a6-90cf-c567ac424f86&pf_rd_r=55X049VWBD0DVJ8EWPEY&ref_=kitchen-big-bets-AA25_B0D79G62J3&th=1",
+          "name": "Native by UC Urban Company M1 Water Purifier | Needs No Service For 2 Years | RO+UV+Copper+Alkaline | 10-Stage Purifier | 4-in-1 Health Booster | 8L Capacity | 2 Year Warranty (Filters Included)",
+          "price": "1294."
+        }
+      ]
     }
   ]
 }
